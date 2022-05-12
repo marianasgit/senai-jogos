@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewGame"
+    android:background="@color/dark_color"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/avatar" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/viewgame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/turret_road_extrabold"
+        android:gravity="center_horizontal"
+        android:text="View Game"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/card_central"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/primary_color"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@id/card_central"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.985"
+        app:layout_constraintStart_toEndOf="@+id/viewgame"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.337">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/vector" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_central"
+        android:layout_width="360dp"
+        android:layout_height="330dp"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@id/viewgame">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/god_of_war2"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/titulo_jogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/turret_road_extrabold"
+        android:shadowColor="@color/black"
+        android:shadowDx="6"
+        android:shadowDy="6"
+        android:shadowRadius="15"
+        android:text="God Of War: Ascension"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@id/card_central" />
+
+    <ScrollView
+        android:id="@+id/scrolltext"
+        android:layout_width="360dp"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@id/titulo_jogo"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans"
+            android:text="This prequel to the very first game in the God of War series and the
+             seventh game in the franchise. It is exclusive for the Sony PlayStation 3 console.
+             The game still uses the ancient Greek mythology as visual inspiration and the primary
+             story source.The player takes control over the warrior Kratos. At the beginning of the
+             game, the protagonist was imprisoned after he violated the blood oath given to the god
+             of war Ares. One of the three goddesses of revenge Megera tortures Kratos, but he anages to break free and start the path to revenge on the gods of Olympus.
+             Kratos still uses the dual Blade of Chaos. They can be improved, but this is not the only weapon in
+             the game: other weapons are available for purchase thanks to the new World Weapons mechanics. The
+             gameplay is no different from the other games of the series: the player still needs to connect the
+             attacks in combos and arrange hack and slash mayhem. This is the only game in the series, in which
+             multiplayer is available for eight people: the main task is to seize control of the card and get a
+             reward from the gods."
+            android:textColor="@color/white" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/icones"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@id/scrolltext"
+        app:layout_constraintVertical_bias="0.57">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/nintendo_icon" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/windows_icon" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/android_icon" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/scrolltext"
+        app:layout_constraintStart_toEndOf="@id/icones"
+        app:layout_constraintEnd_toStartOf="@id/guide2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/botao_watch"
+            android:fontFamily="@font/turret_road_extrabold"
+            android:text="Watch"
+            android:textAllCaps="false" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

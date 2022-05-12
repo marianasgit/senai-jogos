@@ -23,23 +23,21 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:cardCornerRadius="50dp"
-        android:layout_marginLeft="-40dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toStartOf="@+id/editText"
         app:layout_constraintStart_toStartOf="@+id/guideVertical"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/avatar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideVertical"
-            app:layout_constraintTop_toTopOf="@+id/guideHorizontal"
-            app:layout_constraintVertical_bias="0" />
+            app:layout_constraintTop_toTopOf="@+id/guideHorizontal" />
 
     </androidx.cardview.widget.CardView>
 
@@ -52,6 +50,7 @@
         android:drawableRight="@drawable/search"
         android:fontFamily="@font/turret_road_extrabold"
         android:hint="Search..."
+        android:layout_marginRight="20dp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -367,7 +366,8 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
